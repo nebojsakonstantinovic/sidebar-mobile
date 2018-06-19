@@ -1,0 +1,49 @@
+.bar { 
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); 
+ }
+
+.custom-ul {
+  width: 200px;
+ }
+
+.list-group-item {
+  background-color: transparent;
+ }
+
+/* .liItem:hover {
+  background-color: rgba(0, 0, 0, 1.0);
+  cursor: pointer;
+ } */
+
+ .liSubItem:hover {
+  background-color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+ } 
+ 
+ .sideBarExpanded {
+   width: 300px;
+ }
+
+ .sideBarMinified {
+   width: 90px;
+ } 
+
+ .toggle-icon{
+  width: 40px;
+  height: 40px;
+}
+
+.tLeft{
+  text-align: left;
+}
+
+/* dugme */
+
+.custom {
+  display: none;
+  position: absolute;
+  top: 4%;
+  left: 3%;
+  z-index: 20;
+}

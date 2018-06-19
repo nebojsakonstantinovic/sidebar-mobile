@@ -1,0 +1,105 @@
+body, html, #root, .App {
+  width: 100%;
+  height: 100%;
+}
+
+.bar { 
+  width: '200px';
+  height: '100%';
+  background-color: '#000';
+ }
+
+.height100{
+  height: calc(100vh - 56px);
+  
+}
+
+/* iz html tmp1 */
+
+.list-group-item {
+  background-color: transparent;
+}
+
+.crno {
+  background-color: #CCC;
+}
+
+.w20 {
+  width: 20%;
+  text-align: center;
+}
+
+.w80{
+  width: 80%;
+  padding-right: 2px;
+}
+
+.red{
+  width: 100%;
+  padding: 20px;
+  background-color: aqua;
+}
+
+.dugme {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  text-align: center;
+  line-height: 40px;
+  background-color: #CCC;
+}
+
+.ikona {
+  font-size: 20px;
+}
+
+.w100{
+  width: 100%;
+}
+
+.p075rem{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* desktop */
+
+.dugme2 {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: red;
+  border-radius: 50%; 
+}
+
+.w802 {
+  width: 80%;
+}
+
+.minH {
+  min-height: calc(100vh - 56px);
+}
+
+.relat {
+  position: relative;
+}
+
+.abso {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+.custom-ul {
+  width: 100%;
+  background-color: #CCC;
+ }
+
+ .p20 {
+   padding-top: 0.75rem;
+   padding-bottom: 0.75rem;
+ }
