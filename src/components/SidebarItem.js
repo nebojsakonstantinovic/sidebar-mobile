@@ -24,8 +24,8 @@ class SidebarItem extends Component {
         return <ul className="list-group p-0 custom-ul" style={{ position: 'absolute', left: '100%', top: 0 }}>{children}</ul>;
       } else {
         return (
-          <ul className="list-group p-0 custom-ul" style={{ position: 'absolute', left: '100%', top: 0 }}>
-            <li className="mt-0 list-group-item" style={{ color: '#FFF', padding: '20px', border: '1px solid #FFF', backgroundColor: '#000' }}>{title}</li>
+          <ul className="list-group p-0 custom-ul" style={{ position: 'absolute', left: '100%', top: 0, }}>
+            <li className="mt-0 list-group-item p20" style={{ color: '#FFF', border: '1px solid #FFF', backgroundColor: '#000' }}>{title}</li>
             {children}
           </ul>
         );
@@ -37,25 +37,21 @@ class SidebarItem extends Component {
     const { expanded, onClick, icon, title } = this.props
     if (expanded && title) {
       return (
-        <div className=""  onClick={onClick}>
-          <div className="container" style={{ padding: '20px' }}>
-            <div className="row">
-              <div className="col-3 text-center">
-                <i className={icon}></i>
-              </div>
-              <div className="col-9 text-left">
-                {title}
-              </div>
-            </div>
+        <div className="d-flex 100w" onClick={onClick}>
+          <div className="w30 p20 text-center">
+            <i className={icon}></i>
+          </div>
+          <div className="w70 p20 text-left">
+            {title}
           </div>
         </div>
       )
     } else {
       return (
-        <div className="" style={{ padding: '20px' }} onClick={onClick}>
-          <div className="container">
-            <div className="row">
-              <div className="col-12 text-center">
+        <div className="" onClick={onClick}>
+          <div>
+            <div className="w802 m-auto p20">
+              <div className=" text-center">
                 <i className={icon}></i>
               </div>
             </div>
@@ -69,7 +65,7 @@ class SidebarItem extends Component {
     const { title, onClick, expanded, active, icon } = this.props;
     return (
       <li className="list-group-item p-0 liItem">
-        <div style={{ position: 'relative', color: '#FFF', border: `1px solid ${active ? '#FFF' : 'gray'}` }} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
+        <div style={{ position: 'relative', color: '#FFF', border: `1px solid ${active ? '#FFF' : '#CCC'}` }} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
           {/* <div className="row" style={{ padding: '20px' }} onClick={onClick}>
             <div className="col-md-2 text-center">
               <i className={icon}></i>

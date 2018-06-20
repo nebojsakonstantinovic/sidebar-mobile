@@ -57,7 +57,7 @@ class App extends Component {
 
 
 
-  ////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////????
 
 
 
@@ -67,53 +67,40 @@ class App extends Component {
     const { sidebarExpanded, } = this.state;
     let sidebarClass, containerClass;
     if (sidebarExpanded) {
-      sidebarClass = 'col-md-3';
-      containerClass = 'col-md-9';
+      sidebarClass = 'w200px';
+      containerClass = 'vw-w200px';
     } else {
-      sidebarClass = 'col-md-1';
-      containerClass = 'col-md-11';
+      sidebarClass = 'w90px';
+      containerClass = 'vw-w90px';
     }
 
-
-
-
-    let displayNav;
-    let btnClass;
     const { toggle } = this.state;
-    if (toggle) {
-      displayNav = <SidebarMobile />
-      btnClass = "fas fa-times"
-    } else {
-      displayNav = <div>text</div>
-      btnClass = "fas fa-align-justify"
-    }
 
     let mobDesk
     const { width } = this.state;
     if (width > 400) {
       mobDesk =
-        <div className="container height100 m-0 p-0">
-          <div className="row height100">
+        <div className="container-fluid height100 p-0">
+          <div className="d-flex mx-0 height100">
             <div className={`${sidebarClass} text-center bar p-0`}>
               <Sidebar expanded={sidebarExpanded} onSidebarChange={this.updateSidebar} />
             </div>
 
             <div className={`${containerClass} text-center p-0`}>
               text
-        </div>
+            </div>
           </div>
         </div>
     } else {
-      mobDesk = 
-      <Fragment>
-        <div className="dugme align-middle" onClick={() => this.setState({ toggle: !toggle })}>
-          <i className={`${btnClass} ikona`}></i>
-        </div>
+      mobDesk =
+        <Fragment>
+          <div className="dugme align-middle" onClick={() => this.setState({ toggle: !toggle })}>
+            <i className={`${toggle ? "fas fa-times" : "fas fa-align-justify"} ikona`}></i>
+          </div>
 
-       { toggle ? <SidebarMobile /> : (<div>text</div>)  }
-      </Fragment>
-        
-      // {displayNav}
+          {toggle ? <SidebarMobile /> : (<div>text</div>)}
+        </Fragment>
+
     }
 
 
@@ -122,17 +109,6 @@ class App extends Component {
       <div className="App">
         <Navbar />
         {mobDesk}
-
-
-
-        {/* <div className="dugme align-middle" onClick={() => this.setState({ toggle: !toggle })}>
-          <i className={`${btnClass} ikona`}></i>
-        </div>
-
-        {displayNav} */}
-
-
-
       </div>
     );
   }

@@ -3,11 +3,6 @@ body, html, #root, .App {
   height: 100%;
 }
 
-.bar { 
-  width: '200px';
-  height: '100%';
-  background-color: '#000';
- }
 
 .height100{
   height: calc(100vh - 56px);
@@ -103,3 +98,37 @@ body, html, #root, .App {
    padding-top: 0.75rem;
    padding-bottom: 0.75rem;
  }
+
+ .w30 {
+   width: 30%;
+ }
+
+ .w70 {
+   width: 70%;
+ }S
+
+ .w10 {
+   width: 10%;
+ }
+
+ .w90 {
+   width: 90%;
+ }
+
+ /* calc */
+
+.w200px {
+  width: 200px;
+}
+
+.vw-w200px{
+  width: calc(100vw - 200px);
+}
+
+.w90px {
+  width: 50px;
+}
+
+.vw-w90px{
+  width: calc(100vw - 50px);
+}

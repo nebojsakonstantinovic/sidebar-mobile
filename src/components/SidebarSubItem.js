@@ -1,25 +1,21 @@
 import React from 'react';
 
-const SidebarSubItem = ({ title, onClick,parentActive }) => {
+const SidebarSubItem = ({ title, onClick, parentActive }) => {
   return (
-    <li className="mt-0 list-group-item" style={{color: '#FFF', padding: '20px', border: '1px solid #FFF', backgroundColor: 'gray'}} onClick={onClick}>
+    <li className="mt-0 list-group-item p-0" style={{ color: '#FFF', border: '1px solid #FFF', backgroundColor: '#CCc', }} onClick={onClick}>
       {parentActive
         ? (
-          <div className="container">
-            <div className="row">
-              <div className="col-3"></div>
-              <div className="col-9">
-                <div className="tLeft">
-                  {title}
-                </div>
-              </div>
+          <div className="d-flex 100w justify-content-end" onClick={onClick}>
+            <div className="w70 p20 text-left" style={{paddingLeft: '10px' ,borderLeft: parentActive ? '1px solid #FFF' : null}}>
+              {title}
             </div>
           </div>
         )
-        : <div className="text-left">{title}</div>
+        : <div className="text-left p20 pl-3">{title}</div>
       }
     </li>
   )
 }
 
 export default SidebarSubItem;
+
