@@ -7,15 +7,32 @@ class Navbar extends Component {
     loggedIn: true
   };
 
+  updateExpandedState = () => {
+    if (window.matchMedia("(min-width: 700px)").matches) {
+      /* the viewport is at least 400 pixels wide */
+      this.setState({ sidebarExpanded: true })
+    } else {
+      /* the viewport is less than 400 pixels wide */
+      this.setState({ sidebarExpanded: false })
+    }
+  }
+
 
   render() {
     let navbar;
     const { loggedIn } = this.state
+    let navClass;
+
+    if (!window.matchMedia("(min-width: 401px)").matches) {
+      /* the viewport is at least 400 pixels wide */
+      navClass = 'ml-5';
+    }
+
     if (!loggedIn) {
       navbar =
         <div>
           <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand" href="#">Navbar</a>
+            <a className={`navbar-brand ${navClass}`} href="#">Navbar</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -36,7 +53,7 @@ class Navbar extends Component {
       navbar =
         <div>
           <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand" href="#">Navbar</a>
+            <a className={`navbar-brand ${navClass}`} href="#">Navbar</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>

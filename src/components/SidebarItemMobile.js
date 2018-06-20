@@ -9,10 +9,10 @@ class SidebarItemMobile extends Component {
   }
 
   setIconAndTitle() {
-    const { onClick, icon, title } = this.props
+    const { onClick, icon, title, active } = this.props
     if (title) {
       return (
-        <div className="d-flex w100 liSubItem"  onClick={onClick}>
+        <div className="d-flex w100 liSubItem" style={{backgroundColor: active ? '#000' : null}}  onClick={onClick}>
               <div className="w20 p20">
                 <i className={icon}></i>
               </div>
@@ -27,7 +27,7 @@ class SidebarItemMobile extends Component {
   render() {
     const { title, onClick, expanded, active, icon } = this.props;
     return (
-      <li className="list-group-item p-0 liItem">
+      <li className="list-group-item p-0">
         <div>
           {this.setIconAndTitle()}
           {this.renderSubItems()}

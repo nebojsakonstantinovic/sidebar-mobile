@@ -11,10 +11,10 @@
   background-color: transparent;
  }
 
-/* .liItem:hover {
+.liItem:hover {
   background-color: rgba(0, 0, 0, 1.0);
   cursor: pointer;
- } */
+ }
 
  .liSubItem:hover {
   background-color: rgba(0, 0, 0, 1);
@@ -48,4 +48,9 @@
   z-index: 20;
 }
 
+/**/
+
+.hover:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
 
