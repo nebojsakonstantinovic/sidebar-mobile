@@ -41,7 +41,7 @@ class SidebarItem extends Component {
     const { expanded, onClick, icon, title, active } = this.props
     if (expanded && title) {
       return (
-        <div className="d-flex 100w liItem" style={{backgroundColor: `${ active ? '#000' : '#CCC' }`}} onClick={onClick}>
+        <div className="d-flex 100w liItem"   onClick={onClick}>
           <div className="w30 p20 text-center">
             <i className={icon}></i>
           </div>
@@ -49,10 +49,11 @@ class SidebarItem extends Component {
             {title}
           </div>
         </div>
+        // style={{backgroundColor: `${ active ? '#000' : '#CCC' }`}}
       )
     } else {
       return (
-        <div className="" style={{backgroundColor: `${ active ? '#000' : '#CCC' }`}} onClick={onClick}>
+        <div className="liItem" onClick={onClick}>
           <div>
             <div className="w802 m-auto p20 text-center">
               {/* <div style={{ borderRight: active ? '7px solid #FFF' : null, paddingRight: '7px' }}> */}
