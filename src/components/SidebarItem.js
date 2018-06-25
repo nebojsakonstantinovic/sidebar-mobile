@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 class SidebarItem extends Component {
 
@@ -16,7 +17,7 @@ class SidebarItem extends Component {
 
   renderSubItems() {
     const { isHovered } = this.state;
-    const { active, children, title, expanded } = this.props;
+    const { active, children, title, expanded, } = this.props;
     if (!children) return null;
     if (active && expanded) return children;
     if (isHovered) {
@@ -38,17 +39,17 @@ class SidebarItem extends Component {
   }
 
   setIconAndTitle() {
-    const { expanded, onClick, icon, title, active } = this.props
+    const { expanded, onClick, icon, title, active, location, linkp } = this.props
     if (expanded && title) {
       return (
-        <div className="d-flex 100w liItem"   onClick={onClick}>
+        <Link className={`d-flex 100w liItem lin2 ${location.pathname === ('/h' || '/g' || '/f' || '/d') ? 'actv' : null}`} to='/h'   onClick={onClick}>
           <div className="w30 p20 text-center">
             <i className={icon}></i>
           </div>
           <div className="w70 p20 text-left">
             {title}
           </div>
-        </div>
+        </Link>
         // style={{backgroundColor: `${ active ? '#000' : '#CCC' }`}}
       )
     } else {
@@ -90,5 +91,5 @@ class SidebarItem extends Component {
   }
 }
 
-export default SidebarItem;
+export default withRouter(SidebarItem);
 

@@ -32,7 +32,7 @@ class Sidebar extends Component {
 
     return (
       <ul className="list-group p-0 text-white">
-        <SidebarItem icon='fas fa-user' expanded={expanded} title={'catalog'} active={activeTab === 'catalog'} onClick={this.setActiveTab('catalog')}>
+        <SidebarItem linkp='/h' icon='fas fa-user' expanded={expanded} title={'catalog'} active={activeTab === 'catalog'} onClick={this.setActiveTab('catalog')}>
           <ul className="list-group p-0">
             <SidebarSubItem link='/h' expanded={expanded} parentActive={activeTab === 'catalog'} title='products' onClick={console.log} />
             <SidebarSubItem link='/g' expanded={expanded} parentActive={activeTab === 'catalog'} title='cart routes' onClick={console.log} />
