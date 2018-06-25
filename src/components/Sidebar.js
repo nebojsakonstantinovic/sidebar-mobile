@@ -34,10 +34,10 @@ class Sidebar extends Component {
       <ul className="list-group p-0 text-white">
         <SidebarItem icon='fas fa-user' expanded={expanded} title={'catalog'} active={activeTab === 'catalog'} onClick={this.setActiveTab('catalog')}>
           <ul className="list-group p-0">
-            <SidebarSubItem expanded={expanded} parentActive={activeTab === 'catalog'} title='products' onClick={console.log} />
-            <SidebarSubItem expanded={expanded} parentActive={activeTab === 'catalog'} title='cart routes' onClick={console.log} />
-            <SidebarSubItem expanded={expanded} parentActive={activeTab === 'catalog'} title='orders' onClick={console.log} />
-            <SidebarSubItem expanded={expanded} parentActive={activeTab === 'catalog'} title='modules' onClick={console.log} />
+            <SidebarSubItem link='/h' expanded={expanded} parentActive={activeTab === 'catalog'} title='products' onClick={console.log} />
+            <SidebarSubItem link='/g' expanded={expanded} parentActive={activeTab === 'catalog'} title='cart routes' onClick={console.log} />
+            <SidebarSubItem link='/f' expanded={expanded} parentActive={activeTab === 'catalog'} title='orders' onClick={console.log} />
+            <SidebarSubItem link='/d' expanded={expanded} parentActive={activeTab === 'catalog'} title='modules' onClick={console.log} />
           </ul>
         </SidebarItem>
         <SidebarItem icon='fas fa-anchor' expanded={expanded} title={'catalog2'} active={activeTab === 'catalog2'} onClick={this.setActiveTab('catalog2')}>

@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import { Sidebar, Navbar, SidebarMobile } from './components';
 
@@ -88,6 +89,7 @@ class App extends Component {
 
             <div className={`${containerClass} text-center p-0`}>
               text
+              <Route path="/h" exact render={() => <h1>Hello</h1>} />
             </div>
           </div>
         </div>
@@ -108,10 +110,12 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        {mobDesk}
+        <BrowserRouter>
+          {mobDesk}
+        </BrowserRouter>
       </div>
-    );
-  }
-}
-
-export default App;
+        );
+      }
+    }
+    
+    export default App;

@@ -55,3 +55,12 @@
   background-color: rgba(0, 0, 0, 1);
 }
 
+
+.lin {
+  text-decoration: none !important;
+  color:red;
+}
+
+.actv {
+  color: green;
+}
