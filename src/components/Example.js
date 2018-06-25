@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
- class Test extends Component {
+ class Example extends Component {
   render() {
     return (
       <div>
-        
+        {window.location}
       </div>
     )
   }
 }
 
-export default Test;
+export default Example;

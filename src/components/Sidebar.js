@@ -12,18 +12,12 @@ class Sidebar extends Component {
   setActiveTab = (tab) => () => {
     const { activeTab } = this.state;
     const { expanded } = this.props;
-   if (expanded) {
+    if (expanded) {
       this.setState({ activeTab: activeTab === tab ? null : tab })
-   }
+    }
 
   }
 
-  // demo = [
-  //   { title: 'products', onClick: console.log }
-  //   { title: 'cart routes', onClick: console.log },
-  //   { title: 'orders', onClick: console.log },
-  //   { title: 'modules', onClick: console.log },
-  // ]
 
   render() {
     const { activeTab } = this.state;

@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, } from 'react-router-dom';
+import Routes from './routes/index';
 import './App.css';
 import { Sidebar, Navbar, SidebarMobile } from './components';
 
@@ -110,9 +111,9 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        <BrowserRouter>
+        <Routes>
           {mobDesk}
-        </BrowserRouter>
+        </Routes>
       </div>
         );
       }
