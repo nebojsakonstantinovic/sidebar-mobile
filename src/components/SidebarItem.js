@@ -18,8 +18,9 @@ class SidebarItem extends Component {
     const { isHovered } = this.state;
     const { active, children, title, expanded, } = this.props;
     if (!children) return null;
-    if (active && expanded) return <ul className="list-group p-0 custom-ul">{children}</ul>;
+    if (active && expanded) return <ul className="list-group p-0 ">{children}</ul>;
     if (isHovered) {
+      // *********************************
       if (expanded) {
         return <ul className="list-group p-0 custom-ul" style={{ position: 'absolute', left: '100%', top: 0 }}>{children}</ul>;
       } else {
@@ -34,10 +35,10 @@ class SidebarItem extends Component {
   }
 
   setIconAndTitle() {
-    const { expanded, onClick, icon, title } = this.props
+    const { expanded, onClick, icon, title, active } = this.props
     if (expanded && title) {
       return (
-        <div className='d-flex 100w liItem lin2' onClick={onClick}>
+        <div className={`d-flex 100w liItem lin2 ${active ? 'actv' : null}`} onClick={onClick}>
           <div className="w30 p20 text-center">
             <i className={icon}></i>
           </div>
@@ -64,7 +65,7 @@ class SidebarItem extends Component {
   render() {
     const { active } = this.props;
     return (
-      <li className={`list-group-item p-0 ${active ? 'actv' : ''}`}>
+      <li className={`list-group-item p-0 ${active ? 'actv' : null}`}>
         <div style={{ position: 'relative', color: '#FFF', border: `1px solid ${active ? '#FFF' : '#CCC'}`, }} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
           {this.setIconAndTitle()}
           {this.renderSubItems()}

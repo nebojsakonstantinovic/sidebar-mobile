@@ -136,7 +136,3 @@ body, html, #root, .App {
 .dis-inline-flex{
   display: inline-flex;
 }
-
-.actv{
-  background-color: gold;
-}
