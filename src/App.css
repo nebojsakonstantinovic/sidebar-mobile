@@ -132,3 +132,11 @@ body, html, #root, .App {
 .vw-w90px{
   width: calc(100vw - 50px);
 }
+
+.dis-inline-flex{
+  display: inline-flex;
+}
+
+.actv{
+  background-color: gold;
+}
