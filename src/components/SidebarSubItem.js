@@ -3,7 +3,8 @@ import React from 'react';
 
 const SidebarSubItem = ({ title, active, parentActive, expanded, onClick }) => {
   return (
-    <li className={`mt-0 list-group-item p-0 liItem hover  ${active ? 'actv' : null}`} style={{ color: '#FFF', border: '1px solid #FFF', }} onClick={onClick}>
+    <li className={`mt-0 list-group-item p-0 liSubItem hover  ${active ? 'actv' : null}`} style={{ color: '#FFF', }} onClick={onClick}>
+      {/* border */}
       {parentActive && expanded
         ? (
           <div className="lin w100 d-flex justify-content-end">

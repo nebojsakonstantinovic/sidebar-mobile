@@ -19,7 +19,7 @@ class Sidebar extends Component {
     const { pathname } = this.props.location;
     const { expanded } = this.state;
     return (
-      <ul className="list-group p-0 text-white dis-inline-flex" style={{ width: expanded ? '200px' : '90px' }}>
+      <ul className="list-group p-0 text-white d-inline-flex" style={{ width: expanded ? '200px' : '90px' }}>
         {menuItems.map(({ icon, title, path, onClick, subItems = [] }, i) => {
           const itemActive = [path, ...subItems.map(si => si.path)].includes(pathname);
           return (
@@ -31,7 +31,17 @@ class Sidebar extends Component {
             </SidebarItem>
           )
         })}
-        <SidebarItem icon='fas fa-align-justify' onClick={this.toggleExpand} />
+        {/* toggle icon */}
+        <li onClick={this.toggleExpand} >
+            <div className="pointer">
+              <div className="w802 m-auto p20 text-center">
+                <div className=" text-center" >
+                  <i className="fas fa-align-justify"></i>
+                </div>
+              </div>
+            </div>
+        </li>
+        {/* <SidebarItem icon='fas fa-align-justify' onClick={this.toggleExpand} /> */}
         <li className="text-white li-item text-center">{expanded ? 'EXPANDED' : 'MIN'}</li>
       </ul>
     );

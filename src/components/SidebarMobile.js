@@ -19,7 +19,7 @@ class SidebarMobile extends Component {
   render() {
     const { activeTab } = this.state;
     return (
-      <ul className="list-group p-0 text-white crno">
+      <ul className="list-group p-0 text-white bgCCC">
       <SidebarItemMobile icon='fas fa-user'  title={'catalog'} active={activeTab === 'catalog'} onClick={this.setActiveTab('catalog')}>
         <ul className="list-group p-0">
           <SidebarSubItemMobile parentActive={activeTab === 'catalog'} title='products' onClick={console.log} />

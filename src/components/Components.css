@@ -1,15 +1,7 @@
-.bar { 
-  height: 100%;
-  background-color: #CCC;
- }
 
 .custom-ul {
   width: 200px;
   background-color: #CCC;
- }
-
-.list-group-item {
-  background-color: transparent;
  }
 
 .liItem:hover {
@@ -41,13 +33,13 @@
 
 /* dugme */
 
-.custom {
+/* .custom {
   display: none;
   position: absolute;
   top: 4%;
   left: 3%;
   z-index: 20;
-}
+} */
 
 /**/
 
@@ -68,4 +60,52 @@
 .lin2 {
   text-decoration: none !important;
   color: #fff;
+}
+
+/* danas */
+
+.subItemsToSide {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+.border {
+  border: 1px solid #FFF;
+}
+
+/* bootstrap */
+
+.list-group-item {
+  border: none;
+}
+
+.list-group-item:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.list-group-item:last-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.list-group-item {
+  background-color: transparent;
+ }
+
+/* bootstrap/ */
+
+/* danas */
+
+ .actv2 {
+  background-color: black;
+}
+
+.bgBlack {
+  background-color: black;
+}
+
+.pointer {
+  cursor: pointer;
 }

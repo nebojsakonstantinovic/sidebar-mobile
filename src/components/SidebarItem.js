@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './Components.css';
+
 class SidebarItem extends Component {
 
   state = {
@@ -22,11 +24,13 @@ class SidebarItem extends Component {
     if (isHovered) {
       // *********************************
       if (expanded) {
-        return <ul className="list-group p-0 custom-ul" style={{ position: 'absolute', left: '100%', top: 0 }}>{children}</ul>;
+        return <ul className="list-group p-0 custom-ul subItemsToSide">{children}</ul>;
+        // style={{ position: 'absolute', left: '100%', top: 0 }}
       } else {
         return (
-          <ul className="list-group p-0 custom-ul" style={{ position: 'absolute', left: '100%', top: 0, }}>
-            <li className="mt-0 list-group-item p20" style={{ color: '#FFF', border: '1px solid #FFF', backgroundColor: '#000' }}>{title}</li>
+          <ul className="list-group p-0 custom-ul subItemsToSide">
+            <li className="mt-0 list-group-item p20 bgBlack text-white">{title}</li>
+             {/* border */}
             {children}
           </ul>
         );
@@ -38,7 +42,7 @@ class SidebarItem extends Component {
     const { expanded, onClick, icon, title, active } = this.props
     if (expanded && title) {
       return (
-        <div className={`d-flex 100w liItem lin2 ${active ? 'actv' : null}`} onClick={onClick}>
+        <div className={`d-flex 100w liItem lin2 ${active ? 'actv actv2' : null}`} onClick={onClick}>
           <div className="w30 p20 text-center">
             <i className={icon}></i>
           </div>
@@ -49,7 +53,7 @@ class SidebarItem extends Component {
       )
     } else {
       return (
-        <div className="liItem" onClick={onClick}>
+        <div className={`liItem ${active ? 'actv actv2' : null}`} onClick={onClick}>
           <div>
             <div className="w802 m-auto p20 text-center">
               <div className=" text-center" >
@@ -66,7 +70,7 @@ class SidebarItem extends Component {
     const { active } = this.props;
     return (
       <li className={`list-group-item p-0 ${active ? 'actv' : null}`}>
-        <div style={{ position: 'relative', color: '#FFF', border: `1px solid ${active ? '#FFF' : '#CCC'}`, }} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
+        <div style={{ position: 'relative', color: '#FFF', }} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
           {this.setIconAndTitle()}
           {this.renderSubItems()}
         </div>

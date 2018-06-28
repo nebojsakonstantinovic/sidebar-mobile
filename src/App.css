@@ -15,7 +15,7 @@ body, html, #root, .App {
   background-color: transparent;
 }
 
-.crno {
+.bgCCC {
   background-color: #CCC;
 }
 
@@ -105,7 +105,7 @@ body, html, #root, .App {
 
  .w70 {
    width: 70%;
- }S
+ }
 
  .w10 {
    width: 10%;
@@ -133,6 +133,3 @@ body, html, #root, .App {
   width: calc(100vw - 50px);
 }
 
-.dis-inline-flex{
-  display: inline-flex;
-}
