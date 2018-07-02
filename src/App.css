@@ -35,22 +35,7 @@ body, html, #root, .App {
   background-color: aqua;
 }
 
-.dugme {
-  width: 40px;
-  height: 40px;
-  position: fixed;
-  z-index: 15;
-  top: 0;
-  left: 0;
-  text-align: center;
-  line-height: 40px;
-  background-color: #CCC;
-}
-
-.ikona {
-  font-size: 20px;
-}
-
+/* */
 .w100{
   width: 100%;
 }

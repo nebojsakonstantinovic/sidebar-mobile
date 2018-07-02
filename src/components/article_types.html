@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>ERP Mancera</title>
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="erp_mancera.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	</head>
+	<body>
+		<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+			<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">ERP Mancera</a>
+			<ul class="navbar-nav px-3">
+				<li class="nav-item text-nowrap">
+					<a class="nav-link" href="#">Sign out</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="container-fluid">
+			<div class="row">
+				<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+					<div class="sidebar-sticky">
+						<ul class="nav flex-column">
+							<li class="nav-item">
+								<a class="nav-link active" href="#"><i class="fas fa-cubes"></i>Articles</a>
+							</li>
+							<div class="sub-navigation">
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+	Articles list</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" href="#">
+	Article types</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+	Declinations</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+	Perfumes</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+	Suppliers</a>
+								</li>
+							</div>
+							<li class="nav-item">
+								<a class="nav-link" href="#"><i class="far fa-user"></i>Users</a>
+							</li>
+							<div class="sub-navigation">
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+	Users log</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+	Users list</a>
+								</li>
+							</div>
+						</ul>
+					</div>
+				</nav>
+				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+					<div class="alert alert-danger alert-dismissible fade show mt-2" role="alert">
+						There is an error here.
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true"><i class="fas fa-times"></i></span>
+						</button>
+					</div>
+					<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mt-3 mb-2">
+						<h1 class="h5">Article types</h1>
+						<div class="btn-toolbar mb-2 mb-md-0">
+							<button class="btn btn-sm btn-outline-secondary">
+								<i class="fas fa-plus"></i> New article type
+							</button>
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table table-hover table-sm">
+							<thead>
+								<tr>
+									<th>
+										<div class="d-flex">
+											Name
+											<div class="sort-icons">
+												<i class="fas fa-sort-up active"></i>
+												<i class="fas fa-sort-down"></i>
+											</div>
+										</div>
+									</th>
+									<th>
+										<div class="d-flex">
+											Parent
+											<div class="sort-icons">
+												<i class="fas fa-sort-up"></i>
+												<i class="fas fa-sort-down"></i>
+											</div>
+										</div>
+									</th>
+									<th>
+										<div class="d-flex">
+											Family
+											<div class="sort-icons">
+												<i class="fas fa-sort-up"></i>
+												<i class="fas fa-sort-down"></i>
+											</div>
+										</div>
+									</th>
+								</tr>
+								<tr class="bg-light">
+									<th>
+										<input type="text" class="form-control form-control-sm">
+									</th>
+									<th>
+										<select class="form-control form-control-sm" id="exampleFormControlSelect1">
+											<option></option>
+											<option>No parent</option>
+											<option>Parent 1</option>
+											<option>Parent 2</option>
+											<option>Parent 3</option>
+										</select>
+									</th>
+									<th>
+										<div class="d-flex">
+											<select class="form-control form-control-sm" id="exampleFormControlSelect1">
+												<option></option>
+												<option>No family</option>
+												<option>Family 1</option>
+												<option>Family 2</option>
+												<option>Family 3</option>
+											</select>
+											<div class="btn-group">
+												<button type="button" class="btn btn-sm btn-outline-secondary ml-1">
+													<i class="fas fa-search"></i>
+												</button>
+												<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													<span class="sr-only">Toggle Dropdown</span>
+												</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">Reset search</a>
+												</div>
+											</div>
+										</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Lorem</td>
+									<td></td>
+									<td>dolor</td>
+								</tr>
+								<tr>
+									<td>amet</td>
+									<td></td>
+									<td>adipiscing</td>
+								</tr>
+								<tr>
+									<td>Integer</td>
+									<td>nec</td>
+									<td>odio</td>
+								</tr>
+								<tr>
+									<td>libero</td>
+									<td>Sed</td>
+									<td>cursus</td>
+								</tr>
+								<tr>
+									<td>dapibus</td>
+									<td>diam</td>
+									<td>Sed</td>
+								</tr>
+								<tr>
+									<td>Nulla</td>
+									<td>quis</td>
+									<td>sem</td>
+								</tr>
+								<tr>
+									<td>nibh</td>
+									<td></td>
+									<td>imperdiet</td>
+								</tr>
+								<tr>
+									<td>sagittis</td>
+									<td>ipsum</td>
+									<td>Praesent</td>
+								</tr>
+								<tr>
+									<td>Fusce</td>
+									<td>nec</td>
+									<td>tellus</td>
+								</tr>
+								<tr>
+									<td>augue</td>
+									<td>semper</td>
+									<td>porta</td>
+								</tr>
+								<tr>
+									<td>massa</td>
+									<td>Vestibulum</td>
+									<td>lacinia</td>
+								</tr>
+								<tr>
+									<td>eget</td>
+									<td></td>
+									<td>Class</td>
+								</tr>
+								<tr>
+									<td>taciti</td>
+									<td>sociosqu</td>
+									<td>ad</td>
+								</tr>
+								<tr>
+									<td>torquent</td>
+									<td>per</td>
+									<td>conubia</td>
+								</tr>
+								<tr>
+									<td>per</td>
+									<td>inceptos</td>
+									<td>himenaeos</td>
+								</tr>
+								<tr>
+									<td>sodales</td>
+									<td>ligula</td>
+									<td>in</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<nav aria-label="...">
+						<ul class="pagination pagination-sm justify-content-center">
+							<li class="page-item disabled">
+								<a class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-double-left"></i></a>
+							</li>
+							<li class="page-item disabled">
+								<a class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-left"></i></a>
+							</li>
+							<li class="page-item active">
+								<a class="page-link" href="#">1</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">2</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">3</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#"><i class="fas fa-angle-right"></i></a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a>
+							</li>
+						</ul>
+					</nav>
+				</main>
+			</div>
+		</div>
+		<!-- Bootstrap core JavaScript
+    ================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/popper.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+		<!-- Icons -->
+		<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+		<script>feather.replace()</script>
+		<!-- Graphs -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+		<script>
+      var ctx = document.getElementById("myChart");
+      var myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              datasets: [{
+                  data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+                  lineTension: 0,
+                  backgroundColor: 'transparent',
+                  borderColor: '#007bff',
+                  borderWidth: 4,
+                  pointBackgroundColor: '#007bff'
+              }]
+          },
+          options: {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero: false
+                      }
+                  }]
+              },
+              legend: {
+                  display: false,
+              }
+          }
+      });
+    </script>
+	</body>
+</html>
